@@ -8,10 +8,16 @@
 
 html {
     font-size: 62.5%;
+    box-sizing: inherit;
     scroll-behavior: smooth;
 }
 
 body {
+    position: relative;
+    line-height: 1.7;
+    font-size: 1.6rem;
+    background-color: $color-white;
+    color: $color-grey-light;
     box-sizing: border-box;
 }
 
