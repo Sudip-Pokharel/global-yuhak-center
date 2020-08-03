@@ -7,6 +7,11 @@
             display: flex;
             align-items: center;
             justify-content: flex-end;
+
+            @include media(319px) {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
             li {
                @include flexCenter();
                position: relative;
@@ -49,15 +54,22 @@
         }
     }
     &__main {
-        padding-top: .2rem;
-        padding-bottom: .2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
         .container {
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            @include media(319px) {
+                flex-wrap: wrap;
+            }
         }
         &__logo {
-            width: 30rem;
+            width: 22rem;
+            @include media(319px) {
+                width: 18rem;
+            }
         }
         .navigation {
             @include flexCenter();
@@ -72,6 +84,7 @@
                     height: 2.4rem;
                     width: 3.8rem;
                     cursor: pointer;
+                    z-index: 99;
 
                     #menu-trigger-icon {
                         span {
@@ -140,10 +153,10 @@
 
     #mobile-menu {
         position: absolute;
-        top: 13.2rem;
+        top: 12.1rem;
         right: 0;
         width: 0;
-        height: calc(100vh - 13.2rem);
+        height: calc(100vh - 12.1rem);
         background-color: rgba($color-white,1);
         z-index: 999;
         display: none;
@@ -270,6 +283,10 @@ body.menu-open {
             top: 50%;
             left: 10%;
             transform: translateY(-50%);
+
+            @include media(300px) {
+                display: none;
+            }
             
             .title.title--main {
                 max-width: 70rem;
@@ -371,6 +388,12 @@ body.menu-open {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    .footer-logo {
+        @include media(319px) {
+            width: 18rem;
+        }
+    }
     @include media(680px) {
         padding: 2rem 0;
         flex-direction: column;

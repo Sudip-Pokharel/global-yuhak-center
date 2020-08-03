@@ -192,6 +192,13 @@ body {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end; }
+    @media (max-width: 319px) {
+      .header__top ul {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center; } }
     .header__top ul li {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -243,8 +250,8 @@ body {
             fill: #666; }
 
 .header__main {
-  padding-top: .2rem;
-  padding-bottom: .2rem; }
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
   .header__main .container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -255,8 +262,15 @@ body {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between; }
+    @media (max-width: 319px) {
+      .header__main .container {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
   .header__main__logo {
-    width: 30rem; }
+    width: 22rem; }
+    @media (max-width: 319px) {
+      .header__main__logo {
+        width: 18rem; } }
   .header__main .navigation {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -275,7 +289,8 @@ body {
       margin-right: 0;
       height: 2.4rem;
       width: 3.8rem;
-      cursor: pointer; }
+      cursor: pointer;
+      z-index: 99; }
       .header__main .navigation__item.menu-trigger #menu-trigger-icon span {
         position: absolute;
         left: 0;
@@ -329,10 +344,10 @@ body {
 
 .header #mobile-menu {
   position: absolute;
-  top: 13.2rem;
+  top: 12.1rem;
   right: 0;
   width: 0;
-  height: calc(100vh - 13.2rem);
+  height: calc(100vh - 12.1rem);
   background-color: white;
   z-index: 999;
   display: none;
@@ -441,6 +456,9 @@ body {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%); }
+    @media (max-width: 300px) {
+      .main .hero .slider-content {
+        display: none; } }
     .main .hero .slider-content .title.title--main {
       max-width: 70rem;
       margin-bottom: 2rem; }
@@ -552,6 +570,9 @@ body {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
+  @media (max-width: 319px) {
+    .footer .footer-logo {
+      width: 18rem; } }
   @media (max-width: 680px) {
     .footer {
       padding: 2rem 0;
