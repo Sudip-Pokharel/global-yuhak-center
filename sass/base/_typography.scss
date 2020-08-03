@@ -8,12 +8,27 @@ body {
     color: $color-grey-dark;
     font-family: $heading-font-bold;
     backface-visibility: hidden;
+    line-height: 1.1;
     &--main {
         font-size: 6rem;
         color: $color-white;
         font-family: $default-font;
-        line-height: 1.1;
+        @include media(680px) {
+            font-size: 4.2rem;
+        }
     }
+    &--big {
+        font-size: 4.8rem;
+        color: $color-grey-dark;
+        span {
+            display: block;
+            color: $color-secondary;
+        }
+        @include media(680px) {
+            font-size: 3.2rem;
+        }
+    }
+
 }
 
 .paragraph-main {
