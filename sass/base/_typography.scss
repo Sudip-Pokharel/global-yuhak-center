@@ -28,6 +28,12 @@ body {
             font-size: 3.2rem;
         }
     }
+    &--small {
+        font-size: 2.2rem;
+        @include media(680px) {
+            font-size: 2rem;
+        }
+    }
 
 }
 
